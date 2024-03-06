@@ -74,7 +74,6 @@ end
 local SelectionListener: thread
 local previousSelection = {}
 function createSelectionListener()
-	print("Creating Selection Listener thread...")
 	toggleButton:SetActive(true)
 
 	SelectionListener = SelectionService.SelectionChanged:Connect(function()
@@ -117,11 +116,8 @@ function createSelectionListener()
 		-- Clean up previous
 		for index, items in previousSelection do
 			local sound = items[1]
-			print(`Looking for {sound.Name}`)
-			print(items)
 
 			if table.find(newSelection, sound) == nil then
-				print("no longer selected! cleaning ".. sound.Name)
 				safeDisconnect(items[2])
 				safeDisconnect(items[3])
 				safeDestroy(items[4])
@@ -155,7 +151,6 @@ toggleButton.Click:Connect(function() -- Toggling functionality
 
 		for index, items in previousSelection do
 			local sound = items[1]
-			print(`Looking for {sound.Name}`)
 
 			safeDisconnect(items[2])
 			safeDisconnect(items[3])
