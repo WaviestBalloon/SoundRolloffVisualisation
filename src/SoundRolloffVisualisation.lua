@@ -48,7 +48,7 @@ function safeDestroy(instance: Instance)
 		instance:Destroy()
 	end)
 	if not success then
-		warn("Sound Rolloff Visualisation: Error during discarding Sound Property Listener thread; issues may occur!\nOutput: ")
+		warn("Sound Rolloff Visualisation: Error during destroying a object; issues may occur!\nOutput: ")
 		warn(output)
 	end
 end
