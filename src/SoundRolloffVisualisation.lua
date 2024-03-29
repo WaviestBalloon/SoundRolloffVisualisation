@@ -2,7 +2,7 @@ local SelectionService = game:GetService("Selection")
 local InsertService = game:GetService("InsertService")
 local toolbar: PluginToolbar = plugin:CreateToolbar("Sound Rolloff Visualisation")
 local toggleButton: PluginToolbarButton = toolbar:CreateButton("Toggle", "Toggles on or off the rolloff visualisation", "rbxassetid://16644824331")
-local workspaceChangeButton: PluginToolbarButton = toolbar:CreateButton("Connect to Workspace changes", "Toggles on or off the detection of currently playing audios in Workspacce or any that get created", "rbxassetid://16646716512")
+local workspaceChangeButton: PluginToolbarButton = toolbar:CreateButton("Connect to Workspace changes", "Toggles on or off the detection of currently playing audios in Workspace or any that get created", "rbxassetid://16646716512")
 toggleButton.ClickableWhenViewportHidden = false
 workspaceChangeButton.ClickableWhenViewportHidden = false
 if plugin:GetSetting("FIRST_LAUNCH") == nil then -- Inital console message
